@@ -1,20 +1,14 @@
-function whatCanIDrink(age) {
-    if (age <= 0) {
-        return String("Sorry. I can’t tell what drink because that age is incorrect!");
+function fizzBuzz(number) {
+    if (number % 3 === 0 && number % 5 === 0) {
+        return "FizzBuzz";
     }
-    else if (age < 14) {
-        return String("Drink Toddy");
+    else if (number % 3 === 0) {
+        return "Fizz";
     }
-    else if (age < 18 && age >= 14) {
-        return String("Drink Coke");
-    }
-    else if (age < 21 ** age >= 18) {
-        return String("Drink Beer");
-    }
-    else if (age < 130 && age >= 21) {
-        return String("Drink Whiskey");
+    else if (number % 5 === 0) {
+        return "Buzz";
     }
     else {
-        return String("Sorry. I can’t tell what drink because that age is incorrect!");
+        return number;
     }
 }

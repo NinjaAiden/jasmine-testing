@@ -1,40 +1,33 @@
-describe("whatCanIDrink", function() {
+describe("fizzBuzz", function() {
     
      beforeEach(function(){
-        ageCheck = new whatCanIDrink();
+        check = new fizzBuzz();
     });
     
-    describe("checks age function", function() {
+    describe("checks if number is divisible by 3, 5 or both", function() {
          it("should exist", function() {
-            expect(whatCanIDrink).toBeDefined();
+            expect(fizzBuzz).toBeDefined();
         });
         
-        it("should check age of -10 and return undefined string", function() {
-            expect(whatCanIDrink(-10)).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
+        it("should check that the number is divisible by 5 and 3", function() {
+            var result = fizzBuzz(15);
+            expect(result).toBe("FizzBuzz");
         });
         
-        it("should check age of 13 and return child string", function() {
-            expect(whatCanIDrink(13)).toBe("Drink Toddy");
+        it("should check number is divisible by 3", function() {
+            var result = fizzBuzz(9);
+            expect(result).toBe("Fizz");
         });
         
-        it("should check age of 17 and return teenager string", function() {
-            expect(whatCanIDrink(17)).toBe("Drink Coke");
+        
+        it("should check number is divisible by 5", function() {
+            var result = fizzBuzz(20);
+            expect(result).toBe("Buzz");
         });
         
-        it("should check age of 20 and return young adult string", function() {
-            expect(whatCanIDrink(20)).toBe("Drink Beer");
-        });
-        
-        it("should check age of 35 and return adult string", function() {
-            expect(whatCanIDrink(35)).toBe("Drink Whiskey");
-        });
-        
-        it("should check age of 135 and return undefined string", function() {
-            expect(whatCanIDrink(135)).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
-        });
-        
-        it("should check age as not a number and return undefined string", function() {
-            expect(whatCanIDrink("Hello")).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
+        it("should return number if not divisible by 3 or 5 ", function() {
+            var result = fizzBuzz(8);
+            expect(result).toBe(8);
         });
     });
 });
