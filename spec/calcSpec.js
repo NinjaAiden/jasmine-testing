@@ -4,7 +4,11 @@ describe("whatCanIDrink", function() {
         ageCheck = new whatCanIDrink();
     });
     
-    describe("Addition function", function() {
+    describe("checks age function", function() {
+         it("should exist", function() {
+            expect(whatCanIDrink).toBeDefined();
+        });
+        
         it("should check age of -10 and return undefined string", function() {
             expect(whatCanIDrink(-10)).toBe("Sorry. I can’t tell what drink because that age is incorrect!");
         });

@@ -5,13 +5,13 @@ function whatCanIDrink(age) {
     else if (age < 14) {
         return String("Drink Toddy");
     }
-    else if (age < 18) {
+    else if (age < 18 && age >= 14) {
         return String("Drink Coke");
     }
-    else if (age < 21) {
+    else if (age < 21 ** age >= 18) {
         return String("Drink Beer");
     }
-    else if (age < 130) {
+    else if (age < 130 && age >= 21) {
         return String("Drink Whiskey");
     }
     else {
