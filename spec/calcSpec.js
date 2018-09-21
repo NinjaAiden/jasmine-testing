@@ -7,5 +7,11 @@ describe("Calculator", function() {
         it("should not return 4 if given arguments do not produce a sum of 4", function(){
            expect(addition(7, 19)).toBe(26); 
         });
+        
+        it ("should call the alert if either argument is undefined", function(){
+           spyOn(window, "alert");
+           addition("Hello");
+           expect(window.alert).toHaveBeenCalledWith("Both arguments must be a number");
+        });
     });
 });
